@@ -1,0 +1,40 @@
+
+div{
+    width: 200px;
+    height: 200px;
+    border: red 1px solid;
+    float:left;
+    margin-left: 20px;
+    margin-bottom: 20px;;
+}
+
+.test
+{
+    /*position: absolute; /* Yüzen işlem, Sayfanın Kordinatına gider */
+    /*position:static; /*Static, Dizildiği Sırada bırakır. AynıZamanda varsaıylan Değeridir*/
+    /* position: relative; /* Önceki Tag Referans alır. */
+   /* position: fixed; /* Ekranın Verilen Kordinatına Sabitlenir */
+   position: static;
+    background: red;
+    left: 5px;
+    top: 5px;
+    z-index:-1;
+}
+
+.test span{
+    position: absolute;
+    left:10px;
+    top:5px;
+}
+
+.test6
+{
+    background: blue;;
+}
+
+.test12
+{
+    position: relative;
+    background: coral;
+    z-index:-2; /* Bu Özelliğin Çalışması için , position Verilmesi gerekiyor*/
+}

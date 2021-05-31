@@ -1,0 +1,116 @@
+*{
+    /*Genel Ayarlar*/
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body
+{
+    padding: 25px;
+}
+
+.dropdown-contanier
+{
+    position: relative;
+    display: inline-block; /* Dikkat, Harika bir özellik */
+}
+
+.dropdown-contanier button
+{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    border-radius: 4px;
+    background: rebeccapurple;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition:  900ms all;
+
+}
+
+.dropdown-contanier nav
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    border:  1px solid rebeccapurple;
+
+    /* Menu Action */
+
+    opacity: 0;
+    visibility: hidden;
+    transition:  200ms all;
+    padding: 5px;
+
+}
+
+.dropdown-contanier nav ul li a{
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: rebeccapurple;
+    transition:  900ms all;
+    
+}
+
+.dropdown-contanier nav ul li a:hover
+{
+    background:  rgb(105, 55, 15, 0.034);
+    padding-left: 10px;
+    transition:  500ms all;
+    color: rgb(88, 16, 223);
+    font-size: x-large;
+}
+
+.dropdown-contanier button:focus + nav{
+
+ /* ndan Sonra gelen Nav demek*/
+
+    /*Menu Acilis*/
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.dropdown-contanier:focus-within nav{
+    /*Dropdown-contanier , herhangi birine odaklansıysa, bu kume altındaki
+    */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+    /* 
+       nav ' Focus olabilmek için, 
+       tabindex değeri vererek foculanabilir yapıyoruz*/
+}
+
+.dropdown-contanier:focus-within button
+{ /* button focus olursa , Aktif Clasmış gibi düşün*/
+    background: orangered;
+}
+
+#close-dropdown
+{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    /*visibilty : hidden , yapamıyoruz , focusu kaybetmesin diye*/
+}
+
+.active:hover
+{
+    background: orangered;
+    color: white;
+}
